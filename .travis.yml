@@ -3,7 +3,7 @@ services:
   - docker
 
 before_install:
-  - docker build -t phatnguyen/docker-react -f Dockerfile.env .
+  - docker build -t phatnguyen/docker-react -f Dockerfile.dev .
 
 script:
   - docker run phatnguyen/docker-react npm run test -- --coverage
