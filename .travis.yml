@@ -1,0 +1,9 @@
+sudo: required
+services:
+  - docker
+
+before_install:
+  - docker build -t phatnguyen/docker-react -f Dockerfile.env .
+
+script:
+  - docker run phatnguyen/docker-react npm run test -- --coverage
